@@ -1,0 +1,14 @@
+@media (max-width:768px){
+    .section-header h2 {
+     
+        font-size: 22px;
+}
+.donate-text{
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;
+}
+.volunteer-text{
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;   
+}
+}

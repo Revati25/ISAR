@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="mediaquery.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+#contact {
+ /* background-color: #6a9ac4;*/
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+.contact-links {
+  background-color: #1f2e43;
+  background:
+    radial-gradient(
+      circle at 55% 92%, #426691 0 12%, transparent 12.2%
+    ), 
+    radial-gradient(
+      circle at 94% 72%, #426691 0 10%, transparent 10.2%
+    ), 
+    radial-gradient(
+      circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%
+    ), 
+    radial-gradient(
+      circle at 0% 0%, #263a53 0 40%, transparent 40.2%
+    ), 
+    #1f2e43;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-form-wrapper {
+  /*background-color: #ffffff8f;*/
+  background-color: #219199;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+ /* color: #999;*/
+ color:black;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+ /* color: #777;*/
+ color:black;
+  top: -30px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #fd917e;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+        </style>
+
+    </head>
+
+    <body>
+       <!-- Top Bar Start -->
+       <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <p>+91 9422166610 /+91 9588486834</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-envelope"></i>
+                            <p><a href="mailto:isarkulbhushan@gmail.com" style="color:#1a9ca6;">isarkulbhushan@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href="https://twitter.com/gram_sanstha"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/Gram-Vikas-Sanstha-104468332373090"><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/gramvikassanstha/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img src="images/ISAR LOGO.jpg"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Our Work</a>
+                        <div class="dropdown-menu">
+                            <a href="Education.html" class="dropdown-item">Education</a>
+                            <a href="Health.html" class="dropdown-item">Health</a>
+                            <a href="Livelihood.html" class="dropdown-item">Livelihood</a>
+                            <a href="WomenEmpowerment.html" class="dropdown-item">Women Empowerment</a>
+                            <a href="DisasterResponse.html" class="dropdown-item">Disaster Response</a>
+                        </div>
+                    </div>
+                    <a href="event.html" class="nav-item nav-link">Events</a>
+                    <!--<a href="blog.html" class="nav-item nav-link">Blog</a>-->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu">
+                            <a href="Media.html" class="dropdown-item">Media</a>
+                            <a href="Awards.html" class="dropdown-item">Awards</a>
+                            <a href="Gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link active">Contact</a>
+                    <button type="button"  class="btn btn-info mt-0"><a href="checkout.html" style="color:white;">Donate Now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Contact Start -->
+       <!--- <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Get In Touch</p>
+                    <h2>Contact for any query</h2>
+                </div>
+                <div class="contact-img">
+                    <img src="img/contact.jpg" alt="Image">
+                </div>
+                <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>--->
+
+        <section id="contact">
+            <div class="contact-box">
+              <div class="contact-links">
+                <h2>CONTACT</h2>
+                <div class="links">
+                  <div class="link">
+                    <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+                  </div>
+                  <div class="link">
+                    <a><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+                  </div>
+                  <div class="link">
+                    <a><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen"></a>
+                  </div>
+                  <div class="link">
+                    <a><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-form-wrapper">
+                <form>
+                  <div class="form-item">
+                    <input type="text" name="sender" required>
+                    <label>Name:</label>
+                  </div>
+                  <div class="form-item">
+                    <input type="text" name="email" required>
+                    <label>Email:</label>
+                  </div>
+                  <div class="form-item">
+                    <textarea class="" name="message" required></textarea>
+                    <label>Message:</label>
+                  </div>
+                  <button class="submit-btn">Send</button>  
+                </form>
+              </div>
+            </div>
+          </section>
+        <!-- Contact End -->
+
+
+
+        <!--------------Map Start------------------------------>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h3 style="font-weight:700; color:#1a9ca6;">Address Details</h3>
+                    <p><i class="fa fa-map-marker-alt"></i>&nbsp;C/o, Mr. Diwakar Bhoyar, Infront of Sukhkarta 
+                      Hospital, Mainde Chowk, Yavatmal – 445001</p></p>
+                    <p><i class="fa fa-phone-alt"></i>&nbsp;+91 9422166610 / +91 9588486834</p>
+                    <p><i class="fa fa-envelope"></i>&nbsp;isarkulbhushan@gmail.com</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59515.68372888046!2d79.61103341571354!3d21.20287289137467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2b393320473161%3A0xd4a179724488b88a!2sNehru%20Ward%20Bhandara!5e0!3m2!1sen!2sin!4v1661060312577!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>  
+                </div>
+            </div>
+        </div>
+
+
+      <!------------------Map  End------------------------------------------->
+ <!-- Footer Start -->
+ <div class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-contact">
+                  <h2>Our Head Office</h2>
+                  <p><i class="fa fa-map-marker-alt"></i>C/o, Mr. Diwakar Bhoyar, Infront of Sukhkarta 
+                      Hospital, Mainde Chowk, Yavatmal – 445001</p>
+                  <p><i class="fa fa-phone-alt"></i>+91 9422166610 <br>+91 9588486834</p>
+                  <p><i class="fa fa-envelope"></i>isarkulbhushan@gmail.com</p>
+                  <div class="footer-social">
+                      <a class="btn btn-custom" href="https://twitter.com/gram_sanstha"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-custom" href="https://www.facebook.com/Gram-Vikas-Sanstha-104468332373090"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-custom" href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos"><i class="fab fa-youtube"></i></a>
+                      <a class="btn btn-custom" href="https://www.instagram.com/gramvikassanstha/"><i class="fab fa-instagram"></i></a>
+                      <a class="btn btn-custom" href="https://freewebsitecode.com"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-link">
+                  <h2>Popular Links</h2>
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About Us</a>
+                  <a href="contact.html">Contact Us</a>
+                  <a href="event.html">Upcoming Events</a>
+                  
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-link">
+                  <h2>Useful Links</h2>
+                  <a href="volunteer.html">Join Us</a>
+                  <a href="donate.html">Donate Now</a>
+                  <a href="Media.html">Media</a>
+                 
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-newsletter">
+                  <h2>Newsletter</h2>
+                  <form>
+                      <input class="form-control" placeholder="Email goes here">
+                      <button class="btn btn-custom">Submit</button>
+                      <label>Don't worry, we don't spam!</label>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container copyright">
+      <div class="row">
+          <div class="col-md-6">
+              <p>&copy; <a href="index.html">Institute Of Social Awareness & Reforma</a>, All Right Reserved.</p>
+          </div>
+          <div class="col-md-6">
+              <p>Designed By <a href="https://devkalptechnology.com">DevKalp Technology</a></p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
